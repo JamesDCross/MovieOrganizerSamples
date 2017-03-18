@@ -38,7 +38,7 @@ namespace MO
             movies = new ObservableCollection<Movie>();
         }
 
-        //uwp requires this method so I have left it here
+        
         private async void Page_Loaded(object sender, RoutedEventArgs e)
         {
 
