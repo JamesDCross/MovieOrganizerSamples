@@ -240,13 +240,14 @@ namespace MO
 
             //response -> string/ json -> deserilaize
             var serializer = new DataContractJsonSerializer(typeof(MovieRoot));
+            
             /*buffer to hold the api info as it comes in and then hand it to serializer
             which gives the info as an object graph beginning at the root with results*/
-
             var ms = new MemoryStream(Encoding.UTF8.GetBytes(json));
+            
             //serializer reads the memory stream object and is cast to a results object
-
             var result = (MovieRoot)serializer.ReadObject(ms);
+            
             return result;
 
         }
